@@ -1,0 +1,97 @@
+body, html{
+  margin: 0; /* 
+  por padrão a body e html adicionam uma borda na página, vamos
+  remover/resetar utilizando margin e padding.
+  */
+  padding: 0;
+  display: flex; /* Para os elementos se posicionar lado a lado */
+  flex-direction: column; /* É uma propriedade do flex, colocando em coluna */
+  align-items: center;
+  justify-content: center; /* 
+  Centralizar no meio da página, mas para funcionar, precisamos dizer que a
+   altura da tag body e html é de 100%, então definimos o height abaixo.
+   */
+  height: 100vh;
+  background-color: #333; /* 
+  Informamos a cor somente #333,  mas na verdade é #333333, em hexadecimal são
+  sempre 6 dígitos, mas podemos abreviar quando todos são iguais.
+   */
+  color: #ddd; 
+  font-family: 'Montserrat', sans-serif; /* colocamos aqui dentro para aplicar
+  em todo documento, todos os textos do app, irão ter esta fonte. */
+}
+
+img{
+  width: 300px;
+  height: 300px;
+}
+h2{
+  margin-bottom: 5px;
+  
+}
+.duracao{
+  width: 300px;
+  margin-top: 25px;
+}
+.barra{  /* Estilizando barra vazia */
+  width: 300px;
+  height: 6px;
+  border: 1px solid #eee; 
+  border-radius: 5px;
+  display: flex; /* Para colocar a barra cheia dentro da barra vazia. */
+  align-items: center; /* só conseguimos utilizar esse align-items, por que
+  informamos o display: flex acima */
+  justify-content: flex-start; /* 
+  Vai empurrar tudo para esquerda, seguindo a barra, só conseguimos utilizar
+  se tiver 'display: flex' anteriormente.
+   */
+}
+progress{  /* Barra cheia */
+  height: 6px;
+  width: 0%; /*
+  Podemos colocar um 'width: 20%', ou uma porcentagem qualquer, para mostrar a
+  porcentagem da barra cheia na vazia.
+  */
+  background-color: #333;
+}
+.ponto{ /* 
+  Para criarmos um círculo, seguindo o progresso da música, primeiro
+  criamos um quadrado, e depois arredondamos com border-radius
+  */
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+  margin-left: -10px; /* Movendo a bolinha para esquerda, para ajustar a barra */
+}
+
+.tempo{
+  display: flex;
+  width: 300px;
+  justify-content: space-between; /* Esta propriedade vai distanciar dois ou mais
+  elementos, neste caso vamos distanciar o início da música com o fim. */
+}
+
+.player{
+  width: 300px;
+  display: flex;
+  justify-content: space-around; /* Vai separar um pouco os elementos, ao 
+  contrário do 'space-between'. 
+  */
+  align-items: center; /* Junto com o 'space-around' acima, vai centralizar-los */
+  margin-top: 15px;
+}
+
+.botao-play, .botao-pause{
+  font-size: 50px;
+  cursor: pointer; /* Irá exibir ícone da mãozinha sobre o botão */
+}
+
+.setas {
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.botao-pause{
+  display: none; /* Esconde o botão pause */
+}
