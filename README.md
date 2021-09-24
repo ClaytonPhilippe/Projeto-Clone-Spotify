@@ -1,7 +1,7 @@
 # Projeto - Clone Spotify
 Estudo de JavaScript. Este projeto foi desenvolvido com o canal João Tinti.
 
-https://claytonphilippe.github.io/projeto-spotify/
+https://claytonphilippe.github.io/Projeto-Clone-Spotify/
 
 
 <div align="center">
